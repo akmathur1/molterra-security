@@ -1,0 +1,1881 @@
+[
+  {
+    "id": "F-CRD-02",
+    "family": "Credential",
+    "technique": "offline enumeration of a stolen code digest",
+    "severity": "Critical",
+    "witnesses": [
+      "CRD-0001",
+      "CRD-0002",
+      "CRD-0003"
+    ],
+    "intent": "recover a live login code from a database row without touching the server",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CRD-03",
+    "family": "Credential",
+    "technique": "offline enumeration under a fixed work budget",
+    "severity": "Critical",
+    "witnesses": [
+      "CRD-0007"
+    ],
+    "intent": "measure how much compute a stolen digest actually costs to break",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CRD-04",
+    "family": "Credential",
+    "technique": "offline enumeration, worst case in the space",
+    "severity": "Critical",
+    "witnesses": [
+      "CRD-0004"
+    ],
+    "intent": "recover the highest code in the space to bound the attacker's cost",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-09",
+    "family": "Steganography",
+    "technique": "Unicode tag-block byte channel",
+    "severity": "Critical",
+    "witnesses": [
+      "STG-0017",
+      "STG-0018",
+      "STG-0019"
+    ],
+    "intent": "prove the channel exists with a single invisible byte",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-VLT-01",
+    "family": "Vault",
+    "technique": "ciphertext transplanted to another row",
+    "severity": "Critical",
+    "witnesses": [
+      "VLT-0001",
+      "VLT-0002",
+      "VLT-0003",
+      "VLT-0004"
+    ],
+    "intent": "move a live refresh token to another account in the same org",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-VLT-02",
+    "family": "Vault",
+    "technique": "staged nonce collision, plaintext recovered by XOR",
+    "severity": "Critical",
+    "witnesses": [
+      "VLT-0054"
+    ],
+    "intent": "recover a second token from two ciphertexts sharing a nonce",
+    "status": "Open"
+  },
+  {
+    "id": "F-CMP-01",
+    "family": "Composition",
+    "technique": "Cyrillic homoglyphs",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0038"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-02",
+    "family": "Composition",
+    "technique": "Greek homoglyphs",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0039"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-03",
+    "family": "Composition",
+    "technique": "ROT13",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0049"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-04",
+    "family": "Composition",
+    "technique": "Unicode tag character in keyword",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0036"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-05",
+    "family": "Composition",
+    "technique": "byte-order mark in keyword",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0032"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-06",
+    "family": "Composition",
+    "technique": "combining acute accent in keyword",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0037"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-07",
+    "family": "Composition",
+    "technique": "combining grapheme joiner in keyword",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0034"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-08",
+    "family": "Composition",
+    "technique": "enclosed alphanumerics",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0044"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-10",
+    "family": "Composition",
+    "technique": "fullwidth forms",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0040"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-11",
+    "family": "Composition",
+    "technique": "letters separated by hyphens",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0048"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-12",
+    "family": "Composition",
+    "technique": "letters separated by underscores",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0047"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-13",
+    "family": "Composition",
+    "technique": "letters spaced apart",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0045"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-14",
+    "family": "Composition",
+    "technique": "mathematical bold",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0041"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-15",
+    "family": "Composition",
+    "technique": "mathematical monospace",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0042"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-16",
+    "family": "Composition",
+    "technique": "mathematical script",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0043"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-17",
+    "family": "Composition",
+    "technique": "reversed text",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0050"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-18",
+    "family": "Composition",
+    "technique": "right-to-left override in keyword",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0033"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-19",
+    "family": "Composition",
+    "technique": "soft hyphen in keyword",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0031"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-20",
+    "family": "Composition",
+    "technique": "tag-block payload in a grounded sentence",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0023"
+    ],
+    "intent": "encode arbitrary ASCII invisibly inside an approved card",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-22",
+    "family": "Composition",
+    "technique": "variation selector in keyword",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0035"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-23",
+    "family": "Composition",
+    "technique": "word joiner in keyword",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0030"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-24",
+    "family": "Composition",
+    "technique": "zero-width joiner in keyword",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0029"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-25",
+    "family": "Composition",
+    "technique": "zero-width non-joiner in keyword",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0028"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-26",
+    "family": "Composition",
+    "technique": "zero-width payload in a grounded sentence",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0022"
+    ],
+    "intent": "carry attacker bytes into a rendered card through a sentence that grounds cleanly",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-27",
+    "family": "Composition",
+    "technique": "zero-width space in keyword",
+    "severity": "High",
+    "witnesses": [
+      "CMP-0027"
+    ],
+    "intent": "re-emit an injection from the trusted card surface, obfuscated",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-01",
+    "family": "Steganography",
+    "technique": "Arabic letter mark",
+    "severity": "High",
+    "witnesses": [
+      "STG-0008"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-04",
+    "family": "Steganography",
+    "technique": "Hangul filler",
+    "severity": "High",
+    "witnesses": [
+      "STG-0014"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-05",
+    "family": "Steganography",
+    "technique": "Mongolian vowel separator",
+    "severity": "High",
+    "witnesses": [
+      "STG-0009"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-08",
+    "family": "Steganography",
+    "technique": "Unicode tag letter",
+    "severity": "High",
+    "witnesses": [
+      "STG-0016"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-11",
+    "family": "Steganography",
+    "technique": "byte-order mark",
+    "severity": "High",
+    "witnesses": [
+      "STG-0006"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-14",
+    "family": "Steganography",
+    "technique": "combining grapheme joiner",
+    "severity": "High",
+    "witnesses": [
+      "STG-0007"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-18",
+    "family": "Steganography",
+    "technique": "hidden behind U+000B vertical tab",
+    "severity": "High",
+    "witnesses": [
+      "STG-0070",
+      "STG-0071",
+      "STG-0072",
+      "STG-0073",
+      "STG-0074",
+      "STG-0075",
+      "STG-0076",
+      "STG-0077",
+      "STG-0078",
+      "STG-0079",
+      "STG-0080",
+      "STG-0081",
+      "STG-0082",
+      "STG-0083",
+      "STG-0084",
+      "STG-0085",
+      "STG-0086",
+      "STG-0087",
+      "STG-0088",
+      "STG-0089",
+      "STG-0090",
+      "STG-0091",
+      "STG-0092",
+      "STG-0093",
+      "STG-0094"
+    ],
+    "intent": "hide an obfuscated instruction on a line the fence cannot see the end of",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-19",
+    "family": "Steganography",
+    "technique": "hidden behind U+000C form feed",
+    "severity": "High",
+    "witnesses": [
+      "STG-0095",
+      "STG-0096",
+      "STG-0097",
+      "STG-0098",
+      "STG-0099",
+      "STG-0100",
+      "STG-0101",
+      "STG-0102",
+      "STG-0103",
+      "STG-0104",
+      "STG-0105",
+      "STG-0106",
+      "STG-0107",
+      "STG-0108",
+      "STG-0109",
+      "STG-0110",
+      "STG-0111",
+      "STG-0112",
+      "STG-0113",
+      "STG-0114",
+      "STG-0115",
+      "STG-0116",
+      "STG-0117",
+      "STG-0118",
+      "STG-0119"
+    ],
+    "intent": "hide an obfuscated instruction on a line the fence cannot see the end of",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-20",
+    "family": "Steganography",
+    "technique": "hidden behind U+0085 next line",
+    "severity": "High",
+    "witnesses": [
+      "STG-0120",
+      "STG-0121",
+      "STG-0122",
+      "STG-0123",
+      "STG-0124",
+      "STG-0125",
+      "STG-0126",
+      "STG-0127",
+      "STG-0128",
+      "STG-0129",
+      "STG-0130",
+      "STG-0131",
+      "STG-0132",
+      "STG-0133",
+      "STG-0134",
+      "STG-0135",
+      "STG-0136",
+      "STG-0137",
+      "STG-0138",
+      "STG-0139",
+      "STG-0140",
+      "STG-0141",
+      "STG-0142",
+      "STG-0143",
+      "STG-0144"
+    ],
+    "intent": "hide an obfuscated instruction on a line the fence cannot see the end of",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-21",
+    "family": "Steganography",
+    "technique": "hidden behind U+2028 line separator",
+    "severity": "High",
+    "witnesses": [
+      "STG-0020",
+      "STG-0021",
+      "STG-0022",
+      "STG-0023",
+      "STG-0024",
+      "STG-0025",
+      "STG-0026",
+      "STG-0027",
+      "STG-0028",
+      "STG-0029",
+      "STG-0030",
+      "STG-0031",
+      "STG-0032",
+      "STG-0033",
+      "STG-0034",
+      "STG-0035",
+      "STG-0036",
+      "STG-0037",
+      "STG-0038",
+      "STG-0039",
+      "STG-0040",
+      "STG-0041",
+      "STG-0042",
+      "STG-0043",
+      "STG-0044"
+    ],
+    "intent": "hide an obfuscated instruction on a line the fence cannot see the end of",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-22",
+    "family": "Steganography",
+    "technique": "hidden behind U+2029 paragraph separator",
+    "severity": "High",
+    "witnesses": [
+      "STG-0045",
+      "STG-0046",
+      "STG-0047",
+      "STG-0048",
+      "STG-0049",
+      "STG-0050",
+      "STG-0051",
+      "STG-0052",
+      "STG-0053",
+      "STG-0054",
+      "STG-0055",
+      "STG-0056",
+      "STG-0057",
+      "STG-0058",
+      "STG-0059",
+      "STG-0060",
+      "STG-0061",
+      "STG-0062",
+      "STG-0063",
+      "STG-0064",
+      "STG-0065",
+      "STG-0066",
+      "STG-0067",
+      "STG-0068",
+      "STG-0069"
+    ],
+    "intent": "hide an obfuscated instruction on a line the fence cannot see the end of",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-23",
+    "family": "Steganography",
+    "technique": "invisible separator",
+    "severity": "High",
+    "witnesses": [
+      "STG-0013"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-24",
+    "family": "Steganography",
+    "technique": "invisible times",
+    "severity": "High",
+    "witnesses": [
+      "STG-0012"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-26",
+    "family": "Steganography",
+    "technique": "left-to-right mark",
+    "severity": "High",
+    "witnesses": [
+      "STG-0010"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-35",
+    "family": "Steganography",
+    "technique": "right-to-left override",
+    "severity": "High",
+    "witnesses": [
+      "STG-0011"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-37",
+    "family": "Steganography",
+    "technique": "soft hyphen",
+    "severity": "High",
+    "witnesses": [
+      "STG-0005"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-39",
+    "family": "Steganography",
+    "technique": "source-label field",
+    "severity": "High",
+    "witnesses": [
+      "STG-0247",
+      "STG-0248",
+      "STG-0249",
+      "STG-0250",
+      "STG-0251",
+      "STG-0252"
+    ],
+    "intent": "write an instruction into the prompt through the source label",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-41",
+    "family": "Steganography",
+    "technique": "variation selector-16",
+    "severity": "High",
+    "witnesses": [
+      "STG-0015"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-42",
+    "family": "Steganography",
+    "technique": "word joiner",
+    "severity": "High",
+    "witnesses": [
+      "STG-0004"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-44",
+    "family": "Steganography",
+    "technique": "zero width joiner",
+    "severity": "High",
+    "witnesses": [
+      "STG-0003"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-45",
+    "family": "Steganography",
+    "technique": "zero width non-joiner",
+    "severity": "High",
+    "witnesses": [
+      "STG-0002"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-46",
+    "family": "Steganography",
+    "technique": "zero width space",
+    "severity": "High",
+    "witnesses": [
+      "STG-0001"
+    ],
+    "intent": "mark an excerpt with bytes no reviewer of the record can see",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CMP-09",
+    "family": "Composition",
+    "technique": "fabricated lowercase claim",
+    "severity": "Medium",
+    "witnesses": [
+      "CMP-0024"
+    ],
+    "intent": "assert a counterparty and a deadline with no capitalized or numeric token",
+    "status": "Open"
+  },
+  {
+    "id": "F-CMP-21",
+    "family": "Composition",
+    "technique": "unsupported proposition over grounded tokens",
+    "severity": "Medium",
+    "witnesses": [
+      "CMP-0025"
+    ],
+    "intent": "reverse the meaning of a fact while using only its own words",
+    "status": "Open"
+  },
+  {
+    "id": "F-INJ-01",
+    "family": "Injection",
+    "technique": "Cyrillic homoglyphs",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0013",
+      "INJ-0047",
+      "INJ-0081",
+      "INJ-0115",
+      "INJ-0149",
+      "INJ-0183",
+      "INJ-0217",
+      "INJ-0251",
+      "INJ-0285",
+      "INJ-0319",
+      "INJ-0353",
+      "INJ-0387",
+      "INJ-0421",
+      "INJ-0455",
+      "INJ-0489",
+      "INJ-0523",
+      "INJ-0557",
+      "INJ-0591"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-02",
+    "family": "Injection",
+    "technique": "Greek homoglyphs",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0014",
+      "INJ-0048",
+      "INJ-0082",
+      "INJ-0116",
+      "INJ-0150",
+      "INJ-0184",
+      "INJ-0218",
+      "INJ-0252",
+      "INJ-0286",
+      "INJ-0320",
+      "INJ-0354",
+      "INJ-0388",
+      "INJ-0422",
+      "INJ-0456",
+      "INJ-0490",
+      "INJ-0524",
+      "INJ-0558",
+      "INJ-0592"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-03",
+    "family": "Injection",
+    "technique": "ROT13",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0025",
+      "INJ-0059",
+      "INJ-0093",
+      "INJ-0127",
+      "INJ-0161",
+      "INJ-0195",
+      "INJ-0229",
+      "INJ-0263",
+      "INJ-0297",
+      "INJ-0331",
+      "INJ-0365",
+      "INJ-0399",
+      "INJ-0433",
+      "INJ-0467",
+      "INJ-0501",
+      "INJ-0535",
+      "INJ-0569",
+      "INJ-0603"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-04",
+    "family": "Injection",
+    "technique": "Unicode tag character in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0011",
+      "INJ-0045",
+      "INJ-0079",
+      "INJ-0113",
+      "INJ-0147",
+      "INJ-0181",
+      "INJ-0215",
+      "INJ-0249",
+      "INJ-0283",
+      "INJ-0317",
+      "INJ-0351",
+      "INJ-0385",
+      "INJ-0419",
+      "INJ-0453",
+      "INJ-0487",
+      "INJ-0521",
+      "INJ-0555",
+      "INJ-0589"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-05",
+    "family": "Injection",
+    "technique": "base64",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0026",
+      "INJ-0060",
+      "INJ-0094",
+      "INJ-0128",
+      "INJ-0162",
+      "INJ-0196",
+      "INJ-0230",
+      "INJ-0264",
+      "INJ-0298",
+      "INJ-0332",
+      "INJ-0366",
+      "INJ-0400",
+      "INJ-0434",
+      "INJ-0468",
+      "INJ-0502",
+      "INJ-0536",
+      "INJ-0570",
+      "INJ-0604"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-06",
+    "family": "Injection",
+    "technique": "byte-order mark in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0007",
+      "INJ-0041",
+      "INJ-0075",
+      "INJ-0109",
+      "INJ-0143",
+      "INJ-0177",
+      "INJ-0211",
+      "INJ-0245",
+      "INJ-0279",
+      "INJ-0313",
+      "INJ-0347",
+      "INJ-0381",
+      "INJ-0415",
+      "INJ-0449",
+      "INJ-0483",
+      "INJ-0517",
+      "INJ-0551",
+      "INJ-0585"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-07",
+    "family": "Injection",
+    "technique": "combining acute accent in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0012",
+      "INJ-0046",
+      "INJ-0080",
+      "INJ-0114",
+      "INJ-0148",
+      "INJ-0182",
+      "INJ-0216",
+      "INJ-0250",
+      "INJ-0284",
+      "INJ-0318",
+      "INJ-0352",
+      "INJ-0386",
+      "INJ-0420",
+      "INJ-0454",
+      "INJ-0488",
+      "INJ-0522",
+      "INJ-0556",
+      "INJ-0590"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-08",
+    "family": "Injection",
+    "technique": "combining grapheme joiner in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0009",
+      "INJ-0043",
+      "INJ-0077",
+      "INJ-0111",
+      "INJ-0145",
+      "INJ-0179",
+      "INJ-0213",
+      "INJ-0247",
+      "INJ-0281",
+      "INJ-0315",
+      "INJ-0349",
+      "INJ-0383",
+      "INJ-0417",
+      "INJ-0451",
+      "INJ-0485",
+      "INJ-0519",
+      "INJ-0553",
+      "INJ-0587"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-09",
+    "family": "Injection",
+    "technique": "doubled spaces between words",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0097",
+      "INJ-0165",
+      "INJ-0267",
+      "INJ-0301",
+      "INJ-0335",
+      "INJ-0369",
+      "INJ-0403",
+      "INJ-0437"
+    ],
+    "intent": "have the model read secrets out of an attachment into a card",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-10",
+    "family": "Injection",
+    "technique": "enclosed alphanumerics",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0019",
+      "INJ-0053",
+      "INJ-0087",
+      "INJ-0121",
+      "INJ-0155",
+      "INJ-0189",
+      "INJ-0223",
+      "INJ-0257",
+      "INJ-0291",
+      "INJ-0325",
+      "INJ-0359",
+      "INJ-0393",
+      "INJ-0427",
+      "INJ-0461",
+      "INJ-0495",
+      "INJ-0529",
+      "INJ-0563",
+      "INJ-0597"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-11",
+    "family": "Injection",
+    "technique": "fullwidth forms",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0015",
+      "INJ-0049",
+      "INJ-0083",
+      "INJ-0117",
+      "INJ-0151",
+      "INJ-0185",
+      "INJ-0219",
+      "INJ-0253",
+      "INJ-0287",
+      "INJ-0321",
+      "INJ-0355",
+      "INJ-0389",
+      "INJ-0423",
+      "INJ-0457",
+      "INJ-0491",
+      "INJ-0525",
+      "INJ-0559",
+      "INJ-0593"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-12",
+    "family": "Injection",
+    "technique": "ideographic space between words",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0098",
+      "INJ-0166",
+      "INJ-0268",
+      "INJ-0302",
+      "INJ-0336",
+      "INJ-0370",
+      "INJ-0404",
+      "INJ-0438"
+    ],
+    "intent": "have the model read secrets out of an attachment into a card",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-13",
+    "family": "Injection",
+    "technique": "leetspeak",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0020",
+      "INJ-0054",
+      "INJ-0088",
+      "INJ-0122",
+      "INJ-0156",
+      "INJ-0190",
+      "INJ-0224",
+      "INJ-0258",
+      "INJ-0292",
+      "INJ-0326",
+      "INJ-0360",
+      "INJ-0394",
+      "INJ-0428",
+      "INJ-0462",
+      "INJ-0496",
+      "INJ-0530",
+      "INJ-0564",
+      "INJ-0598"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-14",
+    "family": "Injection",
+    "technique": "letters separated by hyphens",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0024",
+      "INJ-0058",
+      "INJ-0092",
+      "INJ-0126",
+      "INJ-0160",
+      "INJ-0194",
+      "INJ-0228",
+      "INJ-0262",
+      "INJ-0296",
+      "INJ-0330",
+      "INJ-0364",
+      "INJ-0398",
+      "INJ-0432",
+      "INJ-0466",
+      "INJ-0500",
+      "INJ-0534",
+      "INJ-0568",
+      "INJ-0602"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-15",
+    "family": "Injection",
+    "technique": "letters separated by periods",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0022",
+      "INJ-0056",
+      "INJ-0090",
+      "INJ-0124",
+      "INJ-0158",
+      "INJ-0192",
+      "INJ-0226",
+      "INJ-0260",
+      "INJ-0294",
+      "INJ-0328",
+      "INJ-0362",
+      "INJ-0396",
+      "INJ-0430",
+      "INJ-0464",
+      "INJ-0498",
+      "INJ-0532",
+      "INJ-0566",
+      "INJ-0600"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-16",
+    "family": "Injection",
+    "technique": "letters separated by underscores",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0023",
+      "INJ-0057",
+      "INJ-0091",
+      "INJ-0125",
+      "INJ-0159",
+      "INJ-0193",
+      "INJ-0227",
+      "INJ-0261",
+      "INJ-0295",
+      "INJ-0329",
+      "INJ-0363",
+      "INJ-0397",
+      "INJ-0431",
+      "INJ-0465",
+      "INJ-0499",
+      "INJ-0533",
+      "INJ-0567",
+      "INJ-0601"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-17",
+    "family": "Injection",
+    "technique": "letters spaced apart",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0021",
+      "INJ-0055",
+      "INJ-0089",
+      "INJ-0123",
+      "INJ-0157",
+      "INJ-0191",
+      "INJ-0225",
+      "INJ-0259",
+      "INJ-0293",
+      "INJ-0327",
+      "INJ-0361",
+      "INJ-0395",
+      "INJ-0429",
+      "INJ-0463",
+      "INJ-0497",
+      "INJ-0531",
+      "INJ-0565",
+      "INJ-0599"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-18",
+    "family": "Injection",
+    "technique": "mathematical bold",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0016",
+      "INJ-0050",
+      "INJ-0084",
+      "INJ-0118",
+      "INJ-0152",
+      "INJ-0186",
+      "INJ-0220",
+      "INJ-0254",
+      "INJ-0288",
+      "INJ-0322",
+      "INJ-0356",
+      "INJ-0390",
+      "INJ-0424",
+      "INJ-0458",
+      "INJ-0492",
+      "INJ-0526",
+      "INJ-0560",
+      "INJ-0594"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-19",
+    "family": "Injection",
+    "technique": "mathematical monospace",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0017",
+      "INJ-0051",
+      "INJ-0085",
+      "INJ-0119",
+      "INJ-0153",
+      "INJ-0187",
+      "INJ-0221",
+      "INJ-0255",
+      "INJ-0289",
+      "INJ-0323",
+      "INJ-0357",
+      "INJ-0391",
+      "INJ-0425",
+      "INJ-0459",
+      "INJ-0493",
+      "INJ-0527",
+      "INJ-0561",
+      "INJ-0595"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-20",
+    "family": "Injection",
+    "technique": "mathematical script",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0018",
+      "INJ-0052",
+      "INJ-0086",
+      "INJ-0120",
+      "INJ-0154",
+      "INJ-0188",
+      "INJ-0222",
+      "INJ-0256",
+      "INJ-0290",
+      "INJ-0324",
+      "INJ-0358",
+      "INJ-0392",
+      "INJ-0426",
+      "INJ-0460",
+      "INJ-0494",
+      "INJ-0528",
+      "INJ-0562",
+      "INJ-0596"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-21",
+    "family": "Injection",
+    "technique": "non-breaking spaces between words",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0096",
+      "INJ-0164",
+      "INJ-0266",
+      "INJ-0300",
+      "INJ-0334",
+      "INJ-0368",
+      "INJ-0402",
+      "INJ-0436"
+    ],
+    "intent": "have the model read secrets out of an attachment into a card",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-22",
+    "family": "Injection",
+    "technique": "reversed text",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0027",
+      "INJ-0061",
+      "INJ-0095",
+      "INJ-0129",
+      "INJ-0163",
+      "INJ-0197",
+      "INJ-0231",
+      "INJ-0265",
+      "INJ-0299",
+      "INJ-0333",
+      "INJ-0367",
+      "INJ-0401",
+      "INJ-0435",
+      "INJ-0469",
+      "INJ-0503",
+      "INJ-0537",
+      "INJ-0571",
+      "INJ-0605"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-23",
+    "family": "Injection",
+    "technique": "right-to-left override in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0008",
+      "INJ-0042",
+      "INJ-0076",
+      "INJ-0110",
+      "INJ-0144",
+      "INJ-0178",
+      "INJ-0212",
+      "INJ-0246",
+      "INJ-0280",
+      "INJ-0314",
+      "INJ-0348",
+      "INJ-0382",
+      "INJ-0416",
+      "INJ-0450",
+      "INJ-0484",
+      "INJ-0518",
+      "INJ-0552",
+      "INJ-0586"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-24",
+    "family": "Injection",
+    "technique": "soft hyphen in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0006",
+      "INJ-0040",
+      "INJ-0074",
+      "INJ-0108",
+      "INJ-0142",
+      "INJ-0176",
+      "INJ-0210",
+      "INJ-0244",
+      "INJ-0278",
+      "INJ-0312",
+      "INJ-0346",
+      "INJ-0380",
+      "INJ-0414",
+      "INJ-0448",
+      "INJ-0482",
+      "INJ-0516",
+      "INJ-0550",
+      "INJ-0584"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-25",
+    "family": "Injection",
+    "technique": "variation selector in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0010",
+      "INJ-0044",
+      "INJ-0078",
+      "INJ-0112",
+      "INJ-0146",
+      "INJ-0180",
+      "INJ-0214",
+      "INJ-0248",
+      "INJ-0282",
+      "INJ-0316",
+      "INJ-0350",
+      "INJ-0384",
+      "INJ-0418",
+      "INJ-0452",
+      "INJ-0486",
+      "INJ-0520",
+      "INJ-0554",
+      "INJ-0588"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-26",
+    "family": "Injection",
+    "technique": "word joiner in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0005",
+      "INJ-0039",
+      "INJ-0073",
+      "INJ-0107",
+      "INJ-0141",
+      "INJ-0175",
+      "INJ-0209",
+      "INJ-0243",
+      "INJ-0277",
+      "INJ-0311",
+      "INJ-0345",
+      "INJ-0379",
+      "INJ-0413",
+      "INJ-0447",
+      "INJ-0481",
+      "INJ-0515",
+      "INJ-0549",
+      "INJ-0583"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-27",
+    "family": "Injection",
+    "technique": "zero-width joiner in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0004",
+      "INJ-0038",
+      "INJ-0072",
+      "INJ-0106",
+      "INJ-0140",
+      "INJ-0174",
+      "INJ-0208",
+      "INJ-0242",
+      "INJ-0276",
+      "INJ-0310",
+      "INJ-0344",
+      "INJ-0378",
+      "INJ-0412",
+      "INJ-0446",
+      "INJ-0480",
+      "INJ-0514",
+      "INJ-0548",
+      "INJ-0582"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-28",
+    "family": "Injection",
+    "technique": "zero-width non-joiner in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0003",
+      "INJ-0037",
+      "INJ-0071",
+      "INJ-0105",
+      "INJ-0139",
+      "INJ-0173",
+      "INJ-0207",
+      "INJ-0241",
+      "INJ-0275",
+      "INJ-0309",
+      "INJ-0343",
+      "INJ-0377",
+      "INJ-0411",
+      "INJ-0445",
+      "INJ-0479",
+      "INJ-0513",
+      "INJ-0547",
+      "INJ-0581"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-INJ-29",
+    "family": "Injection",
+    "technique": "zero-width space in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "INJ-0002",
+      "INJ-0036",
+      "INJ-0070",
+      "INJ-0104",
+      "INJ-0138",
+      "INJ-0172",
+      "INJ-0206",
+      "INJ-0240",
+      "INJ-0274",
+      "INJ-0308",
+      "INJ-0342",
+      "INJ-0376",
+      "INJ-0410",
+      "INJ-0444",
+      "INJ-0478",
+      "INJ-0512",
+      "INJ-0546",
+      "INJ-0580"
+    ],
+    "intent": "exfiltrate the finance ledger to an attacker-controlled address",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-02",
+    "family": "Steganography",
+    "technique": "Cyrillic homoglyphs",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0157",
+      "STG-0191",
+      "STG-0225"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-03",
+    "family": "Steganography",
+    "technique": "Greek homoglyphs",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0158",
+      "STG-0192",
+      "STG-0226"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-06",
+    "family": "Steganography",
+    "technique": "ROT13",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0169",
+      "STG-0203",
+      "STG-0237"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-07",
+    "family": "Steganography",
+    "technique": "Unicode tag character in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0155",
+      "STG-0189",
+      "STG-0223"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-10",
+    "family": "Steganography",
+    "technique": "base64",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0170",
+      "STG-0204",
+      "STG-0238"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-12",
+    "family": "Steganography",
+    "technique": "byte-order mark in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0151",
+      "STG-0185",
+      "STG-0219"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-13",
+    "family": "Steganography",
+    "technique": "combining acute accent in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0156",
+      "STG-0190",
+      "STG-0224"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-15",
+    "family": "Steganography",
+    "technique": "combining grapheme joiner in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0153",
+      "STG-0187",
+      "STG-0221"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-16",
+    "family": "Steganography",
+    "technique": "enclosed alphanumerics",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0163",
+      "STG-0197",
+      "STG-0231"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-17",
+    "family": "Steganography",
+    "technique": "fullwidth forms",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0159",
+      "STG-0193",
+      "STG-0227"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-25",
+    "family": "Steganography",
+    "technique": "leetspeak",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0164",
+      "STG-0198",
+      "STG-0232"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-27",
+    "family": "Steganography",
+    "technique": "letters separated by hyphens",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0168",
+      "STG-0202",
+      "STG-0236"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-28",
+    "family": "Steganography",
+    "technique": "letters separated by periods",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0166",
+      "STG-0200",
+      "STG-0234"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-29",
+    "family": "Steganography",
+    "technique": "letters separated by underscores",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0167",
+      "STG-0201",
+      "STG-0235"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-30",
+    "family": "Steganography",
+    "technique": "letters spaced apart",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0165",
+      "STG-0199",
+      "STG-0233"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-31",
+    "family": "Steganography",
+    "technique": "mathematical bold",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0160",
+      "STG-0194",
+      "STG-0228"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-32",
+    "family": "Steganography",
+    "technique": "mathematical monospace",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0161",
+      "STG-0195",
+      "STG-0229"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-33",
+    "family": "Steganography",
+    "technique": "mathematical script",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0162",
+      "STG-0196",
+      "STG-0230"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-34",
+    "family": "Steganography",
+    "technique": "reversed text",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0171",
+      "STG-0205",
+      "STG-0239"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-36",
+    "family": "Steganography",
+    "technique": "right-to-left override in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0152",
+      "STG-0186",
+      "STG-0220"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-38",
+    "family": "Steganography",
+    "technique": "soft hyphen in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0150",
+      "STG-0184",
+      "STG-0218"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-40",
+    "family": "Steganography",
+    "technique": "variation selector in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0154",
+      "STG-0188",
+      "STG-0222"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-43",
+    "family": "Steganography",
+    "technique": "word joiner in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0149",
+      "STG-0183",
+      "STG-0217"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-47",
+    "family": "Steganography",
+    "technique": "zero-width joiner in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0148",
+      "STG-0182",
+      "STG-0216"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-48",
+    "family": "Steganography",
+    "technique": "zero-width non-joiner in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0147",
+      "STG-0181",
+      "STG-0215"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-STG-49",
+    "family": "Steganography",
+    "technique": "zero-width space in keyword",
+    "severity": "Medium",
+    "witnesses": [
+      "STG-0146",
+      "STG-0180",
+      "STG-0214"
+    ],
+    "intent": "get an instruction into the prompt through a record title",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CRD-01",
+    "family": "Credential",
+    "technique": "ambiguous concatenation in the hash preimage",
+    "severity": "Low",
+    "witnesses": [
+      "CRD-0014"
+    ],
+    "intent": "find two (email, code) pairs with one digest",
+    "status": "ClosedByHardening"
+  },
+  {
+    "id": "F-CRD-05",
+    "family": "Credential",
+    "technique": "variable-time digest comparison (surrogate, not measured)",
+    "severity": "Low",
+    "witnesses": [
+      "CRD-0013"
+    ],
+    "intent": "shipped verify uses String !=, which has no constant-time contract; this row models a byte-serial compare and does not time the shipped binary",
+    "status": "ClosedByHardening"
+  }
+]
